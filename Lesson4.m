@@ -33,20 +33,20 @@ imshow (output_symmetric);
 
 %Add salt & pepper noise
 noisy_img = imnoise(im, 'salt & pepper', 0.05);
-figure, imshow(noisy_img);
+
 
 %Add random noise
 noise = randn(size(im)) .* 32;
 noised_img = im + noise;
-figure, imshow (noised_img);
 
 %Apply a median filter
 %Only working with one single channel picture.
 median_filtered1 = medfilt2(noisy_img);
-figure, imshow(median_filtered1);
 
 median_filtered2 = medfilt2(noised_img);
-figure, imshow(median_filtered2);
+
+multi = cat (4, noisy_img, median_filtered1, noised_img, median_filtered2);
+montage (multi);
 
 
 
