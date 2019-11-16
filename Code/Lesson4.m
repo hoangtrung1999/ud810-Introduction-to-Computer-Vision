@@ -1,7 +1,7 @@
 pkg load image
 
 %Load image
-im = imread ('pic1.jpg');
+im = imread ('E:\Computer Vision\Udacity Course\ud810-Introduction-to-Computer-Vision\Course-Images\pic1.jpg');
 
 #{
 %Create Gaussian Filter

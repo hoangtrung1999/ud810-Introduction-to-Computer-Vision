@@ -28,12 +28,12 @@ imshow(img);
 %imshow(gmag / (4 * sqrt(2)));
 
 %gdir = arctan (gy / gx)
-imshow ((gdir + 180.0) / 360.0);
+figure, imshow ((gdir + 180.0) / 360.0);
 
 %Find pixels with desired gradient direction
 function result = select_gdir (gmag, gdir, mag_min, angle_low, angle_high)
-      result = gmad >= mag_min && gdir >= angle_low && gdir <= angle_high
+      result = gmag >= mag_min && gdir >= angle_low && gdir <= angle_high;
 endfunction
 
-imshow (select_gdir(gmag, gdir, 1, -150, -120))
+figure, imshow (select_gdir(gmag, gdir, 1, 30, 60))
 

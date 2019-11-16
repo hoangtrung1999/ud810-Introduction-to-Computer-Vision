@@ -1,5 +1,5 @@
 pkg load image;
-im = imread ('pic1.jpg');
+im = imread ('E:\Computer Vision\Udacity Course\ud810-Introduction-to-Computer-Vision\Course-Images\pic1.jpg');
 hsize = 31;
 sigma = 5;
 
@@ -34,7 +34,7 @@ endfor
 noise_sigma = 64;
 noise = randn(size(im)) .* noise_sigma;
 noise_img = im + noise;
-imshow(noise_img);
+figure, imshow(noise_img);
 
 %Apply Gaussian filter to smooth the noise
 hsize = 31;
@@ -42,6 +42,6 @@ sigma = 5;
 
 h = fspecial ('gaussian', hsize, sigma);
 output = imfilter (noise_img, h);
-imshow(output);
+figure, imshow(output);
 
 

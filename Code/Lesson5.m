@@ -31,7 +31,7 @@ function [yIndex xIndex] = find_template_2D(template, img)
   xIndex = xRaw - size(template,2) +1;
 endfunction
 
-img = imread('pic4.jpg');
+img = imread('E:\Computer Vision\Udacity Course\ud810-Introduction-to-Computer-Vision\Course-Images\pic4.jpg');
 template = img(320:420, 320:420);
 [y x] = find_template_2D (template, img);
 disp([y x]);
